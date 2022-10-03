@@ -1,33 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VueJs Example Page</title>
-    <link rel="stylesheet" href="./src/style.css">
-</head>
-
-<body>
-    <h1>Hallo VueJs</h1>
-    <div id="app">
-        <p>Hallo {{ userName }} you are {{ age }} Year old</p>
-        <p>Your Name has {{ userName.length }} characters.</p>
-        <img class="border-primary" v-bind:src="`https://picsum.photos/${width}/${height}`"
-            alt="Something random from picsum">
-        <img v-bind="imgAttrs">
-    </div>
-    <div id="cssdata">
-        <h1 :class="cssClasses">Is Peter Parker spidermann?</h1>
-        <h1 :style="{ 'color': activeColor, 'fontSize': fontSize + 'em'}"> ACAB</h1>
-        <h1 :class="{'color-blue': colorblue}">Hallo Welt</h1>
-    </div>
-
-
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
-    <script src="./vuecontent.js"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
