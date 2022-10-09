@@ -22,5 +22,6 @@ export default {
       //this.counter--;
     },
   },
+  emits: ["increase", "decrease"],
 };
 </script>
