@@ -22,12 +22,6 @@
       >{{ scopedData.greeting }} eat some {{ scopedData.item.text }}</template
     ></BaseList
   >
-  <BaseList :listItems="books"
-    ><template #item-list="{ item }"
-      ><b>{{ item.title }}</b> - ISBN {{ item.isbn }}</template
-    >
-    <p>A List of all books in api</p></BaseList
-  >
 </template>
 
 <script>
@@ -59,7 +53,7 @@ export default {
           counter: 0,
         },
       ],
-      books: [],
+
       fruitList: {
         thirdHeadline: "Fruits",
         introText: "a List of many fruits",
@@ -99,10 +93,6 @@ export default {
       this.attendeeCounters.forEach(({ counter }) => (totalCount += counter));
       return totalCount;
     },
-  },
-  async created() {
-    const response = await fetch("http://localhost:4730/books");
-    this.books = await response.json();
   },
 };
 </script>
